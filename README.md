@@ -1,1 +1,1 @@
-# holbertonschool-chatgpt-introduction
+# Foundations v2 - Part 2
