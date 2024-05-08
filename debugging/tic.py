@@ -16,13 +16,25 @@ def is_winner(board, player):
 
     # Check columns
     for col in range(len(board[0])):
-        if all(board[row][col] == player for row in range(3)) and board[0][col] != " ":
+        if (
+            all(board[row][col] == player for row in range(3))
+            and board[0][col] != " "
+        ):
             return True
 
     # Check diagonals
-    if board[0][0] == player and board[1][1] == player and board[2][2] == player and board[0][0] != " ":
+    if (
+        board[0][0] == player and board[1][1] == player
+        and board[2][2] == player
+        and board[0][0] != " "
+    ):
         return True
-    if board[0][2] == player and board[1][1] == player and board[2][0] == player and board[0][2] != " ":
+    if (
+        board[0][2] == player
+        and board[1][1] == player
+        and board[2][0] == player
+        and board[0][2] != " "
+    ):
         return True
 
     return False

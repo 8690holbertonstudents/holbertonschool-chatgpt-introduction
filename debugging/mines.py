@@ -71,7 +71,11 @@ class Minesweeper:
                     for dy in [-1, 0, 1]:
                         nx = cx + dx
                         ny = cy + dy
-                        if 0 <= nx < self.width and 0 <= ny < self.height and not self.revealed[ny][nx]:
+                        if (
+                            0 <= nx < self.width
+                            and 0 <= ny < self.height
+                            and not self.revealed[ny][nx]
+                        ):
                             self.revealed[ny][nx] = True
                             self.revealed_count += 1
                             if self.count_mines_nearby(nx, ny) == 0:
